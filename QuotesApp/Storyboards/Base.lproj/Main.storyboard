@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K9e-za-IZu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nasa.ttf">
+            <string>Nasa</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tII-yc-0Hh">
+            <objects>
+                <navigationController id="K9e-za-IZu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4NH-ss-Olx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pfq-o6-lJY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vb4-X5-k4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="QuotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqR-oA-udk">
+                                <rect key="frame" x="30" y="138" width="354" height="674"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quotes" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-2J-Qey">
+                                        <rect key="frame" x="77" y="50" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="MEv-xZ-N8z"/>
+                                            <constraint firstAttribute="width" constant="200" id="VbG-67-SU8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-le-GNX" customClass="DesignableTextField">
+                                        <rect key="frame" x="27" y="350" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2Zm-jj-6ES"/>
+                                            <constraint firstAttribute="height" constant="40" id="ep9-iB-WEJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mma-mu-nqE" customClass="DesignableTextField">
+                                        <rect key="frame" x="27" y="400" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="30C-SY-e5Z"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="V8I-aN-XT3"/>
+                                            <constraint firstAttribute="width" constant="300" id="sKp-Ul-KcO"/>
+                                            <constraint firstAttribute="height" constant="40" id="wi3-69-kdy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="axt-VF-vbq">
+                                        <rect key="frame" x="27" y="450" width="300" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZX7-ll-tfJ" customClass="DesignableButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="145" height="40"/>
+                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="20"/>
+                                                <state key="normal" title="LOGIN">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                        <color key="value" red="1" green="0.31815901930000001" blue="0.37803619519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7i-F2-Zzf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="908-V2-XJY" customClass="DesignableButton">
+                                                <rect key="frame" x="155" y="0.0" width="145" height="40"/>
+                                                <color key="backgroundColor" red="0.24807343749999999" green="0.66666668650000005" blue="0.40251748240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="20"/>
+                                                <state key="normal" title="SIGN UP">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                        <color key="value" red="0.30439570110000003" green="0.30075573519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q4g-39-Juw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="OqV-uN-xgA"/>
+                                            <constraint firstAttribute="width" constant="300" id="S76-jS-hZP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="KO6-vr-bbq">
+                                        <rect key="frame" x="27" y="625" width="300" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="All Rights Reserved By" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swy-Y9-oAv">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outpost" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcb-Ez-STX">
+                                                <rect key="frame" x="238" y="0.0" width="62" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.83640667540000002" green="1" blue="0.48709471980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CFH-bH-VuY"/>
+                                            <constraint firstAttribute="width" constant="300" id="o7c-iY-Aac"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bSG-le-GNX" firstAttribute="top" secondItem="e4x-2J-Qey" secondAttribute="top" constant="300" id="AdZ-pQ-d3U"/>
+                                    <constraint firstItem="Mma-mu-nqE" firstAttribute="top" secondItem="bSG-le-GNX" secondAttribute="top" constant="50" id="BTb-hi-aPj"/>
+                                    <constraint firstItem="axt-VF-vbq" firstAttribute="centerX" secondItem="Mma-mu-nqE" secondAttribute="centerX" id="GlI-LZ-pro"/>
+                                    <constraint firstItem="KO6-vr-bbq" firstAttribute="centerX" secondItem="axt-VF-vbq" secondAttribute="centerX" id="JTD-U7-r3u"/>
+                                    <constraint firstItem="KO6-vr-bbq" firstAttribute="top" secondItem="axt-VF-vbq" secondAttribute="top" constant="175" id="LiX-zJ-Dsz"/>
+                                    <constraint firstItem="Mma-mu-nqE" firstAttribute="centerX" secondItem="bSG-le-GNX" secondAttribute="centerX" id="UKF-Lm-00R"/>
+                                    <constraint firstItem="e4x-2J-Qey" firstAttribute="top" secondItem="nqR-oA-udk" secondAttribute="top" constant="50" id="XVk-me-Nqn"/>
+                                    <constraint firstItem="axt-VF-vbq" firstAttribute="top" secondItem="Mma-mu-nqE" secondAttribute="top" constant="50" id="YOR-My-6iK"/>
+                                    <constraint firstItem="bSG-le-GNX" firstAttribute="centerX" secondItem="e4x-2J-Qey" secondAttribute="centerX" id="nfJ-Yb-pUZ"/>
+                                    <constraint firstItem="e4x-2J-Qey" firstAttribute="centerX" secondItem="nqR-oA-udk" secondAttribute="centerX" id="npu-P0-e2z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nqR-oA-udk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7q2-pO-evy"/>
+                            <constraint firstItem="nqR-oA-udk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Dth-2W-OrE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nqR-oA-udk" secondAttribute="trailing" constant="30" id="NSN-cb-EL0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nqR-oA-udk" secondAttribute="bottom" constant="50" id="Sdn-vr-sfJ"/>
+                            <constraint firstItem="nqR-oA-udk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="VDz-eB-BVT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5PY-8l-hkq"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="bSG-le-GNX" id="CqL-IC-58v"/>
+                        <outlet property="loginButton" destination="ZX7-ll-tfJ" id="2S7-no-e8u"/>
+                        <outlet property="logoImg" destination="e4x-2J-Qey" id="XTN-3P-qEj"/>
+                        <outlet property="outpostLabel" destination="kcb-Ez-STX" id="y5Z-Nn-Np2"/>
+                        <outlet property="passwordTextField" destination="Mma-mu-nqE" id="69w-vc-ahQ"/>
+                        <outlet property="signUpButton" destination="908-V2-XJY" id="HB3-ii-8lG"/>
+                        <segue destination="kTr-07-2B7" kind="show" identifier="showUserController" id="a7H-k9-Jhr"/>
+                        <segue destination="Jyj-LR-yap" kind="show" identifier="showCameraController" id="J0B-Ak-qUw"/>
+                        <segue destination="uFM-A6-50M" kind="show" identifier="showRegisterStoryboard" id="c7N-Xr-005"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Camera Controller-->
+        <scene sceneID="GO4-ef-K3G">
+            <objects>
+                <viewController storyboardIdentifier="CameraController" id="Jyj-LR-yap" customClass="CameraController" customModule="QuotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oE0-5E-div">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORm-ea-Gtv">
+                                <rect key="frame" x="169" y="433" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take photo"/>
+                                <connections>
+                                    <action selector="takePhotoButtonPressed:" destination="Jyj-LR-yap" eventType="touchUpInside" id="FZX-wU-TdT"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-Hm-OPs">
+                                <rect key="frame" x="87" y="148" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UI1-d2-bui"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XgW-OL-DU0"/>
+                    <connections>
+                        <outlet property="imageView" destination="mDg-Hm-OPs" id="Y2Y-gb-fc3"/>
+                        <outlet property="takePhotoButton" destination="ORm-ea-Gtv" id="2bA-Sc-5tl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfg-WJ-kZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="848"/>
+        </scene>
+        <!--Register Controller-->
+        <scene sceneID="pET-zy-upa">
+            <objects>
+                <viewController storyboardIdentifier="RegisterController" id="uFM-A6-50M" customClass="RegisterController" customModule="QuotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mqX-uh-k1O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-jI-YQv">
+                                <rect key="frame" x="30" y="138" width="354" height="674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv2-jA-40O">
+                                        <rect key="frame" x="27" y="30" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GRa-0J-90S"/>
+                                            <constraint firstAttribute="width" constant="300" id="Ocz-nm-1jb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d6x-eh-AbA">
+                                        <rect key="frame" x="27" y="130" width="300" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtB-HV-7HP" customClass="DesignableTextField" customModule="QuotesApp">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="40"/>
+                                                <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="person" catalog="system"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="firstNameTextFieldTouched:" destination="uFM-A6-50M" eventType="touchDown" id="svk-N9-2lT"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZnO-Sv-zue" customClass="DesignableTextField" customModule="QuotesApp">
+                                                <rect key="frame" x="154" y="0.0" width="146" height="40"/>
+                                                <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="surnameTextFieldTouched:" destination="uFM-A6-50M" eventType="touchDown" id="hRM-4O-Muo"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="8FV-NR-CDW"/>
+                                            <constraint firstAttribute="height" constant="40" id="NWx-S5-B84"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1g-E0-Fjj">
+                                        <rect key="frame" x="27" y="180" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Fzt-sP-AVQ"/>
+                                            <constraint firstAttribute="width" constant="300" id="fsy-dN-gtc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="DyJ-oA-COG">
+                                        <rect key="frame" x="27" y="210" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="H8J-zD-fao"/>
+                                            <constraint firstAttribute="width" constant="300" id="hDt-mR-hzU"/>
+                                        </constraints>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="599482800">
+                                            <!--2019-12-31 11:00:00 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <textField opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhW-Qb-1IV" customClass="DesignableTextField" customModule="QuotesApp">
+                                        <rect key="frame" x="27" y="270" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="WsW-9h-IzR"/>
+                                            <constraint firstAttribute="height" constant="40" id="fc5-gL-hpO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="envelope" catalog="system"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="emailTextFieldTouched:" destination="uFM-A6-50M" eventType="touchDown" id="g5n-eb-0SN"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHP-NG-VCb" customClass="DesignableTextField" customModule="QuotesApp">
+                                        <rect key="frame" x="27" y="320" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Vbj-5d-I1f"/>
+                                            <constraint firstAttribute="width" constant="300" id="jB7-E9-oaV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock" catalog="system"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="passwordTextFieldTouched:" destination="uFM-A6-50M" eventType="editingDidEnd" id="UMY-Y5-Vi0"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ML-RF-8pa" customClass="DesignableTextField" customModule="QuotesApp">
+                                        <rect key="frame" x="27" y="370" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="FM5-uc-NUb"/>
+                                            <constraint firstAttribute="height" constant="40" id="UYb-fM-B33"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock" catalog="system"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtU-Hj-aYG" customClass="DesignableButton">
+                                        <rect key="frame" x="27" y="470" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.24807343749999999" green="0.66666668650000005" blue="0.40251748240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Np1-rF-9Op"/>
+                                            <constraint firstAttribute="height" constant="40" id="Wy8-e6-X5l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="20"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                <color key="value" red="0.30439570110000003" green="0.30075573519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="uFM-A6-50M" eventType="touchUpInside" id="9Aa-6Q-haf"/>
+                                            <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kg-hC-TBz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wHP-NG-VCb" firstAttribute="top" secondItem="HhW-Qb-1IV" secondAttribute="top" constant="50" id="1Sf-n6-d3F"/>
+                                    <constraint firstItem="DyJ-oA-COG" firstAttribute="centerX" secondItem="r1g-E0-Fjj" secondAttribute="centerX" id="4M9-IB-AIo"/>
+                                    <constraint firstItem="d6x-eh-AbA" firstAttribute="top" secondItem="iv2-jA-40O" secondAttribute="top" constant="100" id="6Ug-aK-p2B"/>
+                                    <constraint firstItem="DyJ-oA-COG" firstAttribute="top" secondItem="r1g-E0-Fjj" secondAttribute="top" constant="30" id="7gt-uN-O0m"/>
+                                    <constraint firstItem="d6x-eh-AbA" firstAttribute="centerX" secondItem="iv2-jA-40O" secondAttribute="centerX" id="9sZ-v0-IMQ"/>
+                                    <constraint firstItem="wHP-NG-VCb" firstAttribute="centerX" secondItem="HhW-Qb-1IV" secondAttribute="centerX" id="Ac2-7z-xBL"/>
+                                    <constraint firstItem="iv2-jA-40O" firstAttribute="centerX" secondItem="0Qf-jI-YQv" secondAttribute="centerX" id="Alq-Z7-gp3"/>
+                                    <constraint firstItem="HhW-Qb-1IV" firstAttribute="centerX" secondItem="DyJ-oA-COG" secondAttribute="centerX" id="Ehl-3B-tdT"/>
+                                    <constraint firstItem="r1g-E0-Fjj" firstAttribute="top" secondItem="d6x-eh-AbA" secondAttribute="top" constant="50" id="Q1t-q2-QcV"/>
+                                    <constraint firstItem="5ML-RF-8pa" firstAttribute="top" secondItem="wHP-NG-VCb" secondAttribute="top" constant="50" id="Rt2-qd-Byv"/>
+                                    <constraint firstItem="AtU-Hj-aYG" firstAttribute="top" secondItem="5ML-RF-8pa" secondAttribute="top" constant="100" id="T6A-LB-qPd"/>
+                                    <constraint firstItem="AtU-Hj-aYG" firstAttribute="centerX" secondItem="5ML-RF-8pa" secondAttribute="centerX" id="jVd-iA-4aV"/>
+                                    <constraint firstItem="iv2-jA-40O" firstAttribute="top" secondItem="0Qf-jI-YQv" secondAttribute="top" constant="30" id="jaS-4a-0Vg"/>
+                                    <constraint firstItem="5ML-RF-8pa" firstAttribute="centerX" secondItem="wHP-NG-VCb" secondAttribute="centerX" id="jy5-io-jHx"/>
+                                    <constraint firstItem="r1g-E0-Fjj" firstAttribute="centerX" secondItem="d6x-eh-AbA" secondAttribute="centerX" id="oNL-N4-FlO"/>
+                                    <constraint firstItem="HhW-Qb-1IV" firstAttribute="top" secondItem="DyJ-oA-COG" secondAttribute="top" constant="60" id="waV-KA-teJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FzQ-v1-1un" firstAttribute="trailing" secondItem="0Qf-jI-YQv" secondAttribute="trailing" constant="30" id="5qy-1Z-blL"/>
+                            <constraint firstItem="0Qf-jI-YQv" firstAttribute="top" secondItem="FzQ-v1-1un" secondAttribute="top" constant="50" id="cyi-qU-BF9"/>
+                            <constraint firstItem="FzQ-v1-1un" firstAttribute="bottom" secondItem="0Qf-jI-YQv" secondAttribute="bottom" constant="50" id="lGF-nF-Twb"/>
+                            <constraint firstItem="0Qf-jI-YQv" firstAttribute="leading" secondItem="FzQ-v1-1un" secondAttribute="leading" constant="30" id="tfO-ir-Xoj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FzQ-v1-1un"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x8C-AM-IH9"/>
+                    <connections>
+                        <outlet property="dateOfBirthDatePicker" destination="DyJ-oA-COG" id="jrU-0Z-c5M"/>
+                        <outlet property="emailTextField" destination="HhW-Qb-1IV" id="59a-IS-Teh"/>
+                        <outlet property="firstNameTextField" destination="BtB-HV-7HP" id="HPE-S2-UOD"/>
+                        <outlet property="passwordTextField" destination="wHP-NG-VCb" id="JbX-c3-Buw"/>
+                        <outlet property="repeatPasswordTextField" destination="5ML-RF-8pa" id="TKM-sZ-Oh8"/>
+                        <outlet property="surnameTextField" destination="ZnO-Sv-zue" id="CSe-5m-FTd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFv-cI-dWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="847.76785714285711"/>
+        </scene>
+        <!--User Controller-->
+        <scene sceneID="55g-P1-jss">
+            <objects>
+                <viewController storyboardIdentifier="UserController" id="kTr-07-2B7" customClass="UserController" customModule="QuotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dky-yc-pnU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZP0-Ys-GVE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f4e-1d-QGx" firstAttribute="trailing" secondItem="ZP0-Ys-GVE" secondAttribute="trailing" id="70H-JQ-Lm6"/>
+                            <constraint firstItem="ZP0-Ys-GVE" firstAttribute="leading" secondItem="f4e-1d-QGx" secondAttribute="leading" id="In5-wb-S9x"/>
+                            <constraint firstItem="ZP0-Ys-GVE" firstAttribute="top" secondItem="f4e-1d-QGx" secondAttribute="top" id="Lbw-rI-vh0"/>
+                            <constraint firstItem="f4e-1d-QGx" firstAttribute="bottom" secondItem="ZP0-Ys-GVE" secondAttribute="bottom" id="WZV-zN-YE2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f4e-1d-QGx"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZP0-Ys-GVE" id="ouW-IG-U5f"/>
+                        <segue destination="Vnl-dz-wDg" kind="show" identifier="showCrop" id="I1t-dh-g4R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7L-wc-O13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="139"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="n8y-o3-jU7">
+            <objects>
+                <viewController storyboardIdentifier="CropController" id="Vnl-dz-wDg" customClass="CropController" customModule="QuotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5y-Di-dlR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLk-D2-Doh">
+                                <rect key="frame" x="7" y="88" width="400" height="40"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-o2-Xbf">
+                                        <rect key="frame" x="-2" y="0.0" width="345" height="41"/>
+                                        <connections>
+                                            <action selector="onChandeAngleSliderValue:" destination="Vnl-dz-wDg" eventType="valueChanged" id="JV2-j6-GDO"/>
+                                            <action selector="onEndTouchAngleControl:" destination="Vnl-dz-wDg" eventType="touchUpInside" id="5hG-J0-M9V"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXB-AI-Jiu">
+                                        <rect key="frame" x="358" y="0.0" width="42" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="GSL-ON-okz"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZW4-Sd-Rol"/>
+                                </constraints>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eQ-pa-TdS">
+                                <rect key="frame" x="7" y="812" width="400" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="MvS-B3-8Tx"/>
+                                    <constraint firstAttribute="height" constant="50" id="VOP-US-h5y"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Cancel" width="202" id="4qX-B1-Sz3">
+                                        <connections>
+                                            <action selector="onTouchCancelButton:" destination="Vnl-dz-wDg" id="Tno-S3-tkm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Reset" id="26W-3C-qeZ">
+                                        <connections>
+                                            <action selector="onTouchResetButton:" destination="Vnl-dz-wDg" id="z16-Xx-I8f"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aFT-we-pna"/>
+                                    <barButtonItem style="plain" id="zoh-1S-0e0">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Mjc-gf-Bfr">
+                                            <rect key="frame" x="210.5" y="9.5" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="onTouchLockAspectRatioButton:" destination="Vnl-dz-wDg" eventType="valueChanged" id="cUS-HG-5iL"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                    <barButtonItem title="Aspect" id="JvR-yl-1vE">
+                                        <connections>
+                                            <action selector="onTouchAspectButton:" destination="Vnl-dz-wDg" id="sM7-pV-oit"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Crop" id="yAw-56-nsZ">
+                                        <connections>
+                                            <action selector="onTouchCropButton:" destination="Vnl-dz-wDg" id="5Ip-Hz-iZ5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-TQ-0NA" customClass="HorizontalDial" customModule="HorizontalDial">
+                                <rect key="frame" x="7" y="742" width="400" height="60"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Gw2-5a-BWJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="Ie6-DN-EMs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableRange" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="centerMarkColor">
+                                        <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="markColor">
+                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Vnl-dz-wDg" id="PU0-IS-1TT"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VDh-TQ-0NA" firstAttribute="bottom" secondItem="8eQ-pa-TdS" secondAttribute="bottom" constant="-60" id="A5g-Kd-823"/>
+                            <constraint firstItem="f8x-Am-6aQ" firstAttribute="bottom" secondItem="8eQ-pa-TdS" secondAttribute="bottom" id="P7x-2J-U7v"/>
+                            <constraint firstItem="JLk-D2-Doh" firstAttribute="top" secondItem="f8x-Am-6aQ" secondAttribute="top" id="cnh-rg-yBv"/>
+                            <constraint firstItem="VDh-TQ-0NA" firstAttribute="centerX" secondItem="8eQ-pa-TdS" secondAttribute="centerX" id="h2L-A3-622"/>
+                            <constraint firstItem="8eQ-pa-TdS" firstAttribute="centerX" secondItem="f8x-Am-6aQ" secondAttribute="centerX" id="wGi-IE-nay"/>
+                            <constraint firstItem="JLk-D2-Doh" firstAttribute="centerX" secondItem="f8x-Am-6aQ" secondAttribute="centerX" id="wqn-za-adV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f8x-Am-6aQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xSP-a2-u7L"/>
+                    <connections>
+                        <outlet property="angleLabel" destination="ZXB-AI-Jiu" id="BS5-Vd-6SE"/>
+                        <outlet property="angleSlider" destination="ck8-o2-Xbf" id="Mvh-kz-3lg"/>
+                        <outlet property="horizontalDial" destination="VDh-TQ-0NA" id="EEZ-Hq-cKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pC-PZ-IXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8695652173915" y="143.97321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="email" width="50" height="50"/>
+        <image name="envelope" catalog="system" width="64" height="46"/>
+        <image name="lock" catalog="system" width="52" height="64"/>
+        <image name="password" width="52" height="52"/>
+        <image name="person" catalog="system" width="64" height="60"/>
+        <image name="quotes" width="246" height="246"/>
+    </resources>
+</document>
